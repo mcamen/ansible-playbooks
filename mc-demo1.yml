@@ -1,0 +1,9 @@
+---
+- name: Demo1
+  hosts: test-servers
+  become: true
+  become_user: root
+  gather_facts: true
+  tasks:
+    - name: "Install centos-release"
+      package: name=centos-release state=present
